@@ -29,3 +29,26 @@ now repeat for next unsorted element
 (https://en.wikipedia.org/wiki/Shellsort)
 
 */
+
+
+// O(n^2)
+function insertionSort(arr) {
+    let unsortedIndex = 0;
+    let smallestValue = Number.MAX_VALUE;
+    for (let i=0; i < arr.length; i++) {
+        for (let j=i; j > 0; j--) {
+            if (arr[j] < arr[j-1]) {
+                let temp = arr[j-1];
+                arr[j-1] = arr[j];
+                arr[j] = temp;
+            }
+            console.log(arr);
+        }
+
+    }
+    return arr;
+}
+
+// let arr = [3,4,5,1,2,6];
+let arr = [1,6,8,2,5];
+console.log(insertionSort(arr));
